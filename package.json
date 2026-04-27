@@ -1,6 +1,6 @@
 {
   "name": "@synra-plugin/chat",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Built-in chat UI plugin for Synra.",
   "homepage": "https://github.com/synra-app/synra-plugin-chat#readme",
   "bugs": {
