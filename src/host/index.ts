@@ -7,4 +7,3 @@ export type ChatHostActionRequest = {
 export function resolveChatHostActionLabel(input: ChatHostActionRequest): string {
   return `${input.pluginId}:${input.actionType}`
 }
-

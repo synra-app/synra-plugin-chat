@@ -16,4 +16,3 @@ export function buildChatWorkerPayload(input: ChatWorkerRequest): ChatWorkerResu
     createdAt: Date.now()
   }
 }
-

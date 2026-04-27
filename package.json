@@ -2,7 +2,15 @@
   "name": "@synra-plugin/chat",
   "version": "0.1.0",
   "description": "Built-in chat UI plugin for Synra.",
+  "homepage": "https://github.com/synra-app/synra-plugin-chat#readme",
+  "bugs": {
+    "url": "https://github.com/synra-app/synra-plugin-chat/issues"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:synra-app/synra-plugin-chat.git"
+  },
   "files": [
     "dist"
   ],
@@ -37,7 +45,7 @@
     "release": "bumpp"
   },
   "dependencies": {
-    "@synra/plugin-sdk": "^0.0.3",
+    "@synra/plugin-sdk": "^0.0.6",
     "vue": "^3.5.33"
   },
   "devDependencies": {

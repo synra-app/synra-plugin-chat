@@ -6,4 +6,3 @@ export { CHAT_TEXT_EVENT }
 export default class ChatPlugin extends SynraPlugin {
   onPluginEnter(): void {}
 }
-

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@synra/plugin-sdk':
-        specifier: ^0.0.3
-        version: 0.0.3(@capacitor/core@8.3.1)(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@tsdown/css@0.21.9)(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.3)(vite@8.0.10(@types/node@25.6.0)(jiti@2.6.1)(yaml@2.8.3))(yaml@2.8.3)
+        specifier: ^0.0.6
+        version: 0.0.6(@capacitor/core@8.3.1)(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@tsdown/css@0.21.9)(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.3)(vite@8.0.10(@types/node@25.6.0)(jiti@2.6.1)(yaml@2.8.3))(yaml@2.8.3)
       vue:
         specifier: ^3.5.33
         version: 3.5.33(typescript@6.0.3)
@@ -771,38 +771,38 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
-  '@synra/capacitor-device-connection@0.0.3':
-    resolution: {integrity: sha512-tMgaJlQJzdGcbE7gkoDm/fX+0eyWK2P9h1dGufRfbOyFvwN2dTy4asEHBCcdXSKU330GO9jxbKRLPIk2vyFEhg==}
+  '@synra/capacitor-device-connection@0.0.6':
+    resolution: {integrity: sha512-7cvgHuiTZbqhAeI+UUQzuC9NP1RcmH43gUrFEP3zXl7J5XnGau2d7gcyPCN66xcup5LTU9wLKz0yKOz4t+XB7g==}
     peerDependencies:
       '@capacitor/core': '>=8.0.0'
 
-  '@synra/capacitor-lan-discovery@0.0.3':
-    resolution: {integrity: sha512-zAFPkPKE6rnIOHSHo07bqp8/DkUZ2u3LsGie0CVY7EDE4PI4qCCtjtVMgyR8V7fIR+qgWQ9keFgBmSSKIeDeQQ==}
+  '@synra/capacitor-lan-discovery@0.0.6':
+    resolution: {integrity: sha512-NYfR9gy7YQMGr/noHa3KNp14DUhEj7gpxhqFqHaI1hdoCkPuLPTRP6GjYuLw/GZ0LMyMvFBqza0aDx8bhzIt2Q==}
     peerDependencies:
       '@capacitor/core': '>=8.0.0'
 
-  '@synra/capacitor-preferences@0.0.3':
-    resolution: {integrity: sha512-TXVpbCA9S3GfXXmEHQsnuXIR8qst/ZcJpgsahnzvfz9coaJwn8w31WmR1bK0/m5vDBZeHcDU0BEMuoxPDRMm/g==}
+  '@synra/capacitor-preferences@0.0.6':
+    resolution: {integrity: sha512-u3dwZLljqXJ42h6kNaWCW6ds8syOjNI+sb9AAmfqjdPa1QOPB3wP8ql1x8HchwAYsMfcrxVHogt7KkHvqxLxZA==}
     peerDependencies:
       '@capacitor/core': '>=8.0.0'
 
-  '@synra/hooks@0.0.3':
-    resolution: {integrity: sha512-toHTxpeHA0jEKchzVKiiaPIt85IryyJsIJyl6UnRu4o2kKnEresIZ3TeDBN+VPQLL+3UF4mtkW4PtfZpUrWgCQ==}
+  '@synra/hooks@0.0.6':
+    resolution: {integrity: sha512-XwtlhgzOiYIxfFNXAasDkuQgnkqefic09hmaPqJT8eQq0QqgXPBCL2xzlJ2rp6RFqLL1fM8h+LIreqeBOCf5BA==}
 
-  '@synra/plugin-sdk@0.0.3':
-    resolution: {integrity: sha512-neSsAgYhAuqvaXXIG6VNvWJx81aQhTx+1VvdXjfZWZlIlk6WwfjG4DDWB56jy97HRQGiv59O7iLfMS4IzlFLng==}
+  '@synra/plugin-sdk@0.0.6':
+    resolution: {integrity: sha512-gzbGnWpl5iChgPj11ml3BWz67xLavMhNUZv8ZkuwFPpiB8ig6NFOoCUnSlSpKe22OrWkKO6+oY2GFGPki66I0A==}
 
-  '@synra/plugin-system@0.0.3':
-    resolution: {integrity: sha512-KFWiy5BkaH63K7F9i7rl3TvtH6Jy0Lis4MGZuPvy/8xHkTSkCKvUtQvoU7eiqGSsZZ95ozkcp1/0aqpbsbw4uA==}
+  '@synra/plugin-system@0.0.6':
+    resolution: {integrity: sha512-iRMzhVLo/Xc+u1KjoJwoc0B/H7cR2ZtUvVaMsdrkqa72Ne5kpwrc+nNoqGQJC0HpyhmGUR/dUKbBdIgeJuWAHw==}
 
-  '@synra/protocol@0.0.3':
-    resolution: {integrity: sha512-GJ5e8+ueBe1xU+K4SlcXpgNxInUfrxrxr2x3nrLjl/0dOEwCp74HxST82behDNYV0IvEH8AyvPw0FlQ9Mshd+Q==}
+  '@synra/protocol@0.0.6':
+    resolution: {integrity: sha512-+Ff8xyGDxWFsz63rILDBuJHXel3DobHIfyICucInzO+xp7Q21zmK4EwhKe60bGZCUe+AKCz9/QBwEH5MqGWzSw==}
 
-  '@synra/transport-events@0.0.3':
-    resolution: {integrity: sha512-XYv+8BHyzxVGpVpIwxvYPCUt95f6u/BKnX2s8WNwc8Rarce2/7XGK+V3W/n7ahz8kte69smbWaj9kVeI2iezMA==}
+  '@synra/transport-events@0.0.6':
+    resolution: {integrity: sha512-o791KUJIZ6YArfqx8WvBypXS5abMaK8aAI2KdPuzZFbZnT85eVRKXyMg1wsyfS5ebNKPcaEKofFKI2PD/Be6Cg==}
 
-  '@synra/utils@0.0.3':
-    resolution: {integrity: sha512-CTNRU+HFl29WnWylf2xzuZoZOm9puU0P8cJ1RihQC5H3WCH14868wqdD+tJTGTBolgldNEl0wJP9NL+Z3momVg==}
+  '@synra/utils@0.0.6':
+    resolution: {integrity: sha512-btRYm/vRknnQqeW33n3wZuyV8lAzxI37lxnS1sIYT2q6Qp84jIfl6jJO3vKNwVuPlTXTmEjOTG0XVHxQ8Aa90A==}
 
   '@tsdown/css@0.21.9':
     resolution: {integrity: sha512-ZuSHdio/H9V3+LvHQ9HssC7vKNwqetG6NEyuUME5uCi1VsoGnYJKLQ+CZl4AMT87kSP+N6mF0egzdWtV34e3Pw==}
@@ -2162,39 +2162,39 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@synra/capacitor-device-connection@0.0.3(@capacitor/core@8.3.1)':
+  '@synra/capacitor-device-connection@0.0.6(@capacitor/core@8.3.1)':
     dependencies:
       '@capacitor/core': 8.3.1
-      '@synra/protocol': 0.0.3
+      '@synra/protocol': 0.0.6
 
-  '@synra/capacitor-lan-discovery@0.0.3(@capacitor/core@8.3.1)':
+  '@synra/capacitor-lan-discovery@0.0.6(@capacitor/core@8.3.1)':
     dependencies:
       '@capacitor/core': 8.3.1
-      '@synra/protocol': 0.0.3
+      '@synra/protocol': 0.0.6
 
-  '@synra/capacitor-preferences@0.0.3(@capacitor/core@8.3.1)':
+  '@synra/capacitor-preferences@0.0.6(@capacitor/core@8.3.1)':
     dependencies:
       '@capacitor/core': 8.3.1
 
-  '@synra/hooks@0.0.3(@capacitor/core@8.3.1)(typescript@6.0.3)':
+  '@synra/hooks@0.0.6(@capacitor/core@8.3.1)(typescript@6.0.3)':
     dependencies:
       '@capacitor/app': 8.1.0(@capacitor/core@8.3.1)
-      '@synra/capacitor-device-connection': 0.0.3(@capacitor/core@8.3.1)
-      '@synra/capacitor-lan-discovery': 0.0.3(@capacitor/core@8.3.1)
-      '@synra/capacitor-preferences': 0.0.3(@capacitor/core@8.3.1)
-      '@synra/protocol': 0.0.3
-      '@synra/transport-events': 0.0.3
-      '@synra/utils': 0.0.3
+      '@synra/capacitor-device-connection': 0.0.6(@capacitor/core@8.3.1)
+      '@synra/capacitor-lan-discovery': 0.0.6(@capacitor/core@8.3.1)
+      '@synra/capacitor-preferences': 0.0.6(@capacitor/core@8.3.1)
+      '@synra/protocol': 0.0.6
+      '@synra/transport-events': 0.0.6
+      '@synra/utils': 0.0.6
       vue: 3.5.33(typescript@6.0.3)
     transitivePeerDependencies:
       - '@capacitor/core'
       - typescript
 
-  '@synra/plugin-sdk@0.0.3(@capacitor/core@8.3.1)(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@tsdown/css@0.21.9)(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.3)(vite@8.0.10(@types/node@25.6.0)(jiti@2.6.1)(yaml@2.8.3))(yaml@2.8.3)':
+  '@synra/plugin-sdk@0.0.6(@capacitor/core@8.3.1)(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@tsdown/css@0.21.9)(@types/node@25.6.0)(jiti@2.6.1)(typescript@6.0.3)(vite@8.0.10(@types/node@25.6.0)(jiti@2.6.1)(yaml@2.8.3))(yaml@2.8.3)':
     dependencies:
-      '@synra/hooks': 0.0.3(@capacitor/core@8.3.1)(typescript@6.0.3)
-      '@synra/plugin-system': 0.0.3
-      '@synra/protocol': 0.0.3
+      '@synra/hooks': 0.0.6(@capacitor/core@8.3.1)(typescript@6.0.3)
+      '@synra/plugin-system': 0.0.6
+      '@synra/protocol': 0.0.6
       '@unocss/config': 66.6.8
       '@unocss/vite': 66.6.8(vite@8.0.10(@types/node@25.6.0)(jiti@2.6.1)(yaml@2.8.3))
       '@vitejs/plugin-vue': 6.0.6(vite@8.0.10(@types/node@25.6.0)(jiti@2.6.1)(yaml@2.8.3))(vue@3.5.33(typescript@6.0.3))
@@ -2243,17 +2243,17 @@ snapshots:
       - vite
       - yaml
 
-  '@synra/plugin-system@0.0.3':
+  '@synra/plugin-system@0.0.6':
     dependencies:
-      '@synra/protocol': 0.0.3
+      '@synra/protocol': 0.0.6
 
-  '@synra/protocol@0.0.3': {}
+  '@synra/protocol@0.0.6': {}
 
-  '@synra/transport-events@0.0.3':
+  '@synra/transport-events@0.0.6':
     dependencies:
       '@capacitor/core': 8.3.1
 
-  '@synra/utils@0.0.3':
+  '@synra/utils@0.0.6':
     dependencies:
       '@capacitor/core': 8.3.1
       consola: 3.4.2
