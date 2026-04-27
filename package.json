@@ -1,0 +1,66 @@
+{
+  "name": "@synra-plugin/chat",
+  "version": "0.1.0",
+  "description": "Built-in chat UI plugin for Synra.",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "types": "./src/ui/index.ts",
+  "exports": {
+    "./host": "./src/host/index.ts",
+    "./shared": "./src/shared/index.ts",
+    "./ui": "./src/ui/index.ts",
+    "./ui/pages/home": "./pages/home/index.vue",
+    "./worker": "./src/worker/index.ts",
+    "./package.json": "./package.json",
+    "./style.css": "./dist/style.css"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      "./host": "./dist/host/index.mjs",
+      "./shared": "./dist/shared/index.mjs",
+      "./ui": "./dist/ui/index.mjs",
+      "./ui/pages/home": "./dist/ui/pages/home/index.mjs",
+      "./worker": "./dist/worker/index.mjs",
+      "./package.json": "./package.json",
+      "./style.css": "./dist/style.css"
+    }
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "check": "vp check",
+    "prepublishOnly": "vp run build"
+  },
+  "dependencies": {
+    "@synra/plugin-sdk": "^0.0.3",
+    "vue": "^3.5.33"
+  },
+  "devDependencies": {
+    "@iconify-json/eos-icons": "^1.2.4",
+    "@iconify-json/lucide": "^1.2.104",
+    "@tsdown/css": "0.21.9",
+    "@types/node": "^25.6.0",
+    "@unocss/preset-icons": "^66.6.8",
+    "@unocss/preset-wind3": "^66.6.8",
+    "bumpp": "^11.0.1",
+    "typescript": "^6.0.3",
+    "uno-colors": "^0.1.0",
+    "unocss": "^66.6.8",
+    "vite-plus": "^0.1.19"
+  },
+  "synra": {
+    "title": "Chat",
+    "builtin": false,
+    "icon": "material-symbols:chat-bubble-outline",
+    "entries": {
+      "ui": "./dist/ui/index.mjs",
+      "worker": "./dist/worker/index.mjs",
+      "shared": "./dist/shared/index.mjs",
+      "host": "./dist/host/index.mjs"
+    }
+  }
+}

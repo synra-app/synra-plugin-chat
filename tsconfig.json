@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": [
+    "*.config.ts",
+    "composables/**/*.ts",
+    "components/**/*.vue",
+    "src/**/*.ts",
+    "pages/**/*.vue",
+    "tests"
+  ]
+}
