@@ -33,7 +33,8 @@
     "build": "vp pack",
     "dev": "vp pack --watch",
     "check": "vp check",
-    "prepublishOnly": "vp run build"
+    "prepublishOnly": "vp run build",
+    "release": "bumpp"
   },
   "dependencies": {
     "@synra/plugin-sdk": "^0.0.3",
