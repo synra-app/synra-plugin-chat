@@ -1,12 +1,12 @@
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
-import { usePairedDevices, useTransport } from '@synra/plugin-sdk/hooks'
+import { usePairedDevices, useSynraPluginEnvelope } from '@synra/plugin-sdk/hooks'
 import { isObjectPayload, normalizePayloadToText, resolveErrorMessage } from './chatPayload'
 import type { ChatDeviceListItem, ChatMessage } from '../src/types/chat'
 import { CHAT_TEXT_EVENT } from '../src/shared/events'
 
 export function useMessagesPage() {
   const { pairedDevices, reloadPairedRecords } = usePairedDevices()
-  const { sendMessageToReadyDevice, onSynraMessage, ensureReady } = useTransport()
+  const pluginEv = useSynraPluginEnvelope('@synra-plugin/chat')
 
   const messageInput = ref('')
   const selectedDeviceId = ref<string>('')
@@ -30,26 +30,26 @@ export function useMessagesPage() {
     () => devices.value.find((device) => device.deviceId === selectedDeviceId.value) ?? null
   )
   const selectedDeviceLabel = computed(
-    () => selectedDevice.value?.name ?? selectedDevice.value?.deviceId ?? '未选择设备'
+    () => selectedDevice.value?.name ?? selectedDevice.value?.deviceId ?? 'No device selected'
   )
   const selectedReady = computed(() => Boolean(selectedDevice.value?.ready))
   const selectedStatusShort = computed(() => {
     if (!selectedDevice.value) {
-      return '未选择设备'
+      return 'No device selected'
     }
     if (selectedReady.value) {
-      return '可发送'
+      return 'Ready to send'
     }
-    return '设备未就绪，请在主程序完成连接'
+    return 'Device not ready — connect in the main app first'
   })
   const selectedStatusLong = computed(() => {
     if (!selectedDevice.value) {
-      return '请选择左侧设备'
+      return 'Pick a device from the list'
     }
     if (selectedReady.value) {
-      return '已连接，可发送消息'
+      return 'Connected — you can send messages'
     }
-    return '设备未就绪：请在主程序连接后再发消息'
+    return 'Device not ready — open a transport to this peer in the main app, then try again'
   })
   const canSend = computed(
     () =>
@@ -83,7 +83,6 @@ export function useMessagesPage() {
   )
 
   async function refreshPairedList(): Promise<void> {
-    await ensureReady()
     await reloadPairedRecords()
   }
 
@@ -110,11 +109,11 @@ export function useMessagesPage() {
     sendError.value = null
     try {
       if (!selectedReady.value) {
-        throw new Error('设备未就绪，请稍后重试。')
+        throw new Error('Device is not ready. Connect in the main app and try again.')
       }
-      await sendMessageToReadyDevice({
-        deviceId: selectedDevice.value.deviceId,
+      await pluginEv.send({
         event: CHAT_TEXT_EVENT,
+        target: selectedDevice.value.deviceId,
         payload: {
           channel: 'default',
           body: content
@@ -122,20 +121,21 @@ export function useMessagesPage() {
       })
       messageInput.value = ''
     } catch (error) {
-      sendError.value = resolveErrorMessage(error, '发送失败')
+      sendError.value = resolveErrorMessage(error, 'Send failed')
       messages.value = messages.value.filter((row) => row.id !== optimisticId)
     } finally {
       sending.value = false
     }
   }
 
-  const unsubscribe = onSynraMessage(
-    (message) => {
+  const unsubscribe = pluginEv.subscribe(
+    (inbound) => {
+      const message = inbound.envelope
       const outerPayload = isObjectPayload(message.payload) ? message.payload : null
       const wirePayload =
         outerPayload && isObjectPayload(outerPayload.payload) ? outerPayload.payload : outerPayload
       const body = wirePayload && 'body' in wirePayload ? wirePayload.body : message.payload
-      const receivedAt = message.timestamp
+      const receivedAt = message.timestamp ?? Date.now()
       messages.value = [
         ...messages.value,
         {

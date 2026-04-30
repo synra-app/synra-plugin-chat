@@ -73,7 +73,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- Teleport：避免多根节点插在 chat 的 grid 里占位，导致桌面设备列被挤到消息下方 -->
+  <!-- Teleport avoids extra roots in the layout; hidden at lg where inline sidebar exists -->
   <Teleport to="body">
     <div class="pointer-events-none lg:hidden">
       <transition
@@ -89,7 +89,7 @@ onUnmounted(() => {
           class="pointer-events-auto fixed inset-0 z-[75] bg-black/55"
           role="button"
           tabindex="0"
-          aria-label="关闭"
+          aria-label="Close overlay"
           @click="emit('close')"
           @keydown.enter.prevent="emit('close')"
         />
@@ -116,7 +116,7 @@ onUnmounted(() => {
               class="app-focus-ring rounded-lg px-2 py-1 text-xs text-muted-2 hover:bg-white/7 hover:text-slate-200"
               @click="emit('close')"
             >
-              完成
+              Done
             </button>
           </div>
           <div class="min-h-0 flex-1 overflow-hidden p-3 pt-2">

@@ -16,14 +16,14 @@ const emit = defineEmits<{
 <template>
   <div class="space-y-1.5">
     <div class="flex items-end gap-2 lg:hidden">
-      <label class="sr-only" for="synra-chat-input-m">消息</label>
+      <label class="sr-only" for="synra-chat-input-m">Message</label>
       <textarea
         id="synra-chat-input-m"
         v-model="messageInput"
         rows="1"
         class="app-focus-ring max-h-32 min-h-[2.75rem] flex-1 resize-y rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100 outline-none placeholder:text-muted-2"
         :disabled="disabled"
-        placeholder="输入消息…"
+        placeholder="Type a message…"
         @keydown.enter.exact.prevent="emit('send')"
       />
       <button
@@ -32,21 +32,21 @@ const emit = defineEmits<{
         :disabled="!canSend"
         @click="emit('send')"
       >
-        {{ sending ? '…' : '发送' }}
+        {{ sending ? '…' : 'Send' }}
       </button>
     </div>
 
     <div
       class="relative hidden rounded-2xl border border-white/10 bg-white/5 px-3 pb-10 pt-2 lg:block"
     >
-      <label class="sr-only" for="synra-chat-input-d">消息</label>
+      <label class="sr-only" for="synra-chat-input-d">Message</label>
       <textarea
         id="synra-chat-input-d"
         v-model="messageInput"
         rows="3"
         class="app-focus-ring w-full resize-none border-0 bg-transparent text-sm text-slate-100 outline-none placeholder:text-muted-2"
         :disabled="disabled"
-        placeholder="输入消息…"
+        placeholder="Type a message…"
         @keydown.enter.exact.prevent="emit('send')"
       />
       <button
@@ -55,13 +55,13 @@ const emit = defineEmits<{
         :disabled="!canSend"
         @click="emit('send')"
       >
-        {{ sending ? '发送中' : '发送' }}
+        {{ sending ? 'Sending…' : 'Send' }}
       </button>
     </div>
 
     <p v-if="error" class="px-0.5 text-xs text-rose-300">{{ error }}</p>
     <p v-else class="hidden px-0.5 text-[11px] text-muted-2/70 lg:block">
-      Enter 发送，Shift+Enter 换行
+      Enter to send · Shift+Enter for newline
     </p>
   </div>
 </template>

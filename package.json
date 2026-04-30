@@ -28,11 +28,11 @@
   "publishConfig": {
     "access": "public",
     "exports": {
-      "./host": "./dist/host/index.mjs",
-      "./shared": "./dist/shared/index.mjs",
+      "./host": "./dist/host/index.cjs",
+      "./shared": "./dist/shared/index.cjs",
       "./ui": "./dist/ui/index.mjs",
       "./ui/pages/home": "./dist/ui/pages/home/index.mjs",
-      "./worker": "./dist/worker/index.mjs",
+      "./worker": "./dist/worker/index.cjs",
       "./package.json": "./package.json",
       "./style.css": "./dist/style.css"
     }
@@ -45,12 +45,12 @@
     "release": "bumpp"
   },
   "dependencies": {
-    "@synra/plugin-sdk": "^0.0.6",
+    "@synra/plugin-sdk": "^0.0.7",
     "vue": "^3.5.33"
   },
   "devDependencies": {
     "@iconify-json/eos-icons": "^1.2.4",
-    "@iconify-json/lucide": "^1.2.104",
+    "@iconify-json/lucide": "^1.2.105",
     "@tsdown/css": "0.21.9",
     "@types/node": "^25.6.0",
     "@unocss/preset-icons": "^66.6.8",
@@ -59,7 +59,7 @@
     "typescript": "^6.0.3",
     "uno-colors": "^0.1.0",
     "unocss": "^66.6.8",
-    "vite-plus": "^0.1.19"
+    "vite-plus": "^0.1.20"
   },
   "packageManager": "pnpm@10.33.2",
   "synra": {
@@ -68,9 +68,15 @@
     "icon": "material-symbols:chat-bubble-outline",
     "entries": {
       "ui": "./dist/ui/index.mjs",
-      "worker": "./dist/worker/index.mjs",
-      "shared": "./dist/shared/index.mjs",
-      "host": "./dist/host/index.mjs"
+      "worker": "./dist/worker/index.cjs",
+      "shared": "./dist/shared/index.cjs",
+      "host": "./dist/host/index.cjs"
     }
+  },
+  "inlinedDependencies": {
+    "@synra/plugin-sdk": "0.0.7",
+    "@vue/reactivity": "3.5.33",
+    "@vue/runtime-core": "3.5.33",
+    "@vue/shared": "3.5.33"
   }
 }

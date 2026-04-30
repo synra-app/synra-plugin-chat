@@ -51,14 +51,14 @@ watch(
     class="chat-msg-scroll min-h-0 flex-1 space-y-2 overflow-auto px-1 py-2 sm:px-2"
   >
     <div v-if="loading && messages.length === 0" class="py-6 text-center text-xs text-slate-500">
-      加载中…
+      Loading…
     </div>
 
     <div
       v-else-if="messages.length === 0"
       class="py-10 text-center text-xs leading-relaxed text-slate-500"
     >
-      暂无消息，连接设备后即可开始对话。
+      No messages yet. Connect a device to start chatting.
     </div>
 
     <article

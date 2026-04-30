@@ -14,28 +14,28 @@ const emit = defineEmits<{
 function statusLine(status: ChatDeviceListItem['linkStatus']): string {
   switch (status) {
     case 'connected':
-      return '已连接'
+      return 'Connected'
     case 'connecting':
-      return '连接中'
+      return 'Connecting'
     case 'idle':
-      return '在线'
+      return 'Online'
     default:
-      return '离线'
+      return 'Offline'
   }
 }
 </script>
 
 <template>
-  <!-- 结构与样式对齐 apps/frontend SidebarNav + ScrollContainer 内边距 -->
+  <!-- Layout aligned with apps/frontend sidebar patterns -->
   <nav class="relative flex h-full min-h-0 flex-col gap-3 overflow-hidden">
     <div class="flex shrink-0 items-center justify-between px-0.5">
-      <span class="text-xs text-muted-2">设备</span>
+      <span class="text-xs text-muted-2">Devices</span>
       <button
         type="button"
         class="app-focus-ring rounded-lg px-2 py-1 text-xs text-muted-2 transition hover:bg-white/7 hover:text-slate-200"
         @click="emit('refreshPaired')"
       >
-        刷新
+        Refresh
       </button>
     </div>
 
@@ -67,7 +67,7 @@ function statusLine(status: ChatDeviceListItem['linkStatus']): string {
     </ul>
 
     <p v-else class="px-1 py-6 text-center text-xs leading-relaxed text-muted-2">
-      暂无已配对设备，请先在主程序完成配对。
+      No paired devices yet. Pair from the main app first.
     </p>
   </nav>
 </template>
