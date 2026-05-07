@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "@synra/plugin-sdk": "^0.0.7",
-    "vue": "^3.5.33"
+    "vue": "^3.5.34"
   },
   "devDependencies": {
     "@iconify-json/eos-icons": "^1.2.4",
@@ -55,13 +55,13 @@
     "@types/node": "^25.6.0",
     "@unocss/preset-icons": "^66.6.8",
     "@unocss/preset-wind3": "^66.6.8",
-    "bumpp": "^11.0.1",
+    "bumpp": "^11.1.0",
     "typescript": "^6.0.3",
     "uno-colors": "^0.1.0",
     "unocss": "^66.6.8",
     "vite-plus": "^0.1.20"
   },
-  "packageManager": "pnpm@10.33.2",
+  "packageManager": "pnpm@11.0.8",
   "inlinedDependencies": {
     "@synra/plugin-sdk": "0.0.7",
     "@vue/reactivity": "3.5.33",
