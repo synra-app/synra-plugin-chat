@@ -62,6 +62,12 @@
     "vite-plus": "^0.1.20"
   },
   "packageManager": "pnpm@10.33.2",
+  "inlinedDependencies": {
+    "@synra/plugin-sdk": "0.0.7",
+    "@vue/reactivity": "3.5.33",
+    "@vue/runtime-core": "3.5.33",
+    "@vue/shared": "3.5.33"
+  },
   "synra": {
     "title": "Chat",
     "builtin": false,
@@ -72,11 +78,5 @@
       "shared": "./dist/shared/index.cjs",
       "host": "./dist/host/index.cjs"
     }
-  },
-  "inlinedDependencies": {
-    "@synra/plugin-sdk": "0.0.7",
-    "@vue/reactivity": "3.5.33",
-    "@vue/runtime-core": "3.5.33",
-    "@vue/shared": "3.5.33"
   }
 }
